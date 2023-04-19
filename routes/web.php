@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('report/order-based-on-city', [ReportController::class, 'totalOrderBasedOnCity']);
+Route::get('report/order-based-on-specific-city', [ReportController::class, 'totalOrderBasedOnSpecificCity']);
+
 Route::get('/', function () {
     return view('welcome');
+
+
 });
